@@ -119,7 +119,7 @@ function Skill() {
                 {selectMap["image"] && selectMap["image"].map((item, index) => {
                     console.log(item)
                     return (
-                    <img key={index} src={`https://spiffy-cobbler-281b84.netlify.app/${item}`} alt="Selected" />
+                    <img key={index} src={`https://spiffy-cobbler-281b84.netlify.app/data/${item}`} alt="Selected" />
                 )})}
             </div>
             <div>
