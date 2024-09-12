@@ -14,7 +14,6 @@ function Skill() {
     const [a, setA] = useState(false);
     const [clickCoordinates, setClickCoordinates] = useState({ x: 0, y: 0 });
     const [select, setselectmap] = useState({});
-
     useEffect(() => {
         console.log("useEffect is running"); // デバッグ用ログ
         const fetchMaps = async () => {
@@ -131,7 +130,6 @@ function Skill() {
             </svg>
             <div>
                 {select["image"] && select["image"].map((item, index) => {
-                    console.log(item)
                     return(
                     <img key={index} src={`/data/${item}`} alt="Selected" />
                 )})}
