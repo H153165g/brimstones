@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom';
 import './map.css';
-import skilldata from '/data/data.json'; // 正しいパスを指定
+import skilldata from '/public/data/data.json'; // 正しいパスを指定
 
 function Skill() {
     const [selectMap, setSelectMap] = useState({});
@@ -119,7 +119,7 @@ function Skill() {
                 {selectMap["image"] && selectMap["image"].map((item, index) => {
                     console.log(item)
                     return (
-                    <img key={index} src={`https://spiffy-cobbler-281b84.netlify.app/data/${item}`} alt="Selected" />
+                    <img key={index} src={`/${item}`} alt="Selected" />
                 )})}
             </div>
             <div>
