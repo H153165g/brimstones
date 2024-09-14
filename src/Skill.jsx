@@ -83,7 +83,7 @@ function Skill() {
                             width={selectMap === item ? 40 : 20}
                             height={selectMap === item ? 40 : 20}
                             href={brim?.abilities.find((ability) => ability.displayName === itemSkill)?.displayIcon}
-                            style={{ cursor: 'pointer', opacity: selectMap === item ? 1 : 0.5 }}
+                            style={{ cursor: 'pointer', opacity: selectMap === item ? 1 : 0.7 }}
                             onClick={() => handleClick(item)}
                         />
                         {selectMap && selectMap.loca && selectMap.loca.map((locaItem, locaIndex) => (
@@ -95,17 +95,18 @@ function Skill() {
                                 height="30"
                                 href="https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayiconsmall.png"
                                 onClick={() => handleClick(locaItem)}
+                                style={{ cursor: 'pointer'}}
                             />
                         ))}
                     </g>
                 ))}
-                <image
+                {/* <image
                     x={clickCoordinates.x - 15}
                     y={clickCoordinates.y - 15}
                     width="30"
                     height="30"
                     href="https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayiconsmall.png"
-                />
+                /> */}
             </svg>
             <div>
                 {selectMap["image"] && selectMap["image"].map((item, index) => {

@@ -56,7 +56,7 @@ function Map() {
             <div>
                 {a ? (
                     maps.map((item, index) => {
-                        if (item.displayName !== "The Range" && item.displayName !== "Basic Training") {
+                        if (item.displayName !== "The Range" && item.displayName !== "Basic Training" &&item.displayName !== "Fracture" &&item.displayName !== "Breeze" &&item.displayName !== "Split" &&item.displayName !== "District" &&item.displayName !== "Kasbah" &&item.displayName !== "Piazza"&&item.displayName !== "Pearl"&&item.displayName !== "Drift") {
                             console.log(skilldata)
                             return (
                                 <div className="img-container" key={index} onClick={() => handleMapClick(item.displayName, itemName)}>

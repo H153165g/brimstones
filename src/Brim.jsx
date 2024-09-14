@@ -41,12 +41,13 @@ function Brim() {
             <div className="content">
                 <h3>Brimstone Skill:</h3>
                 {a && brim ? (
-                    brim.abilities.map((item, index) => (
+                    brim.abilities.map((item, index) => {
+                        return(
                         <div key={index} className="img-container" onClick={() => handleIconClick(item.displayName)}>
-                            <img src={item.displayIcon} alt={item.displayName} className="ability-icon" />
+                            <img src={item.displayIcon} alt={item.displayName} className="ability-icon" style={item.displayName=="Incendiary"?{opacity:"1",cursor:"pointer"}:{opacity:"0.5"}}/>
                             <div className="img-name">{item.displayName}</div>
                         </div>
-                    ))
+                    )})
                 ) : (
                     <Gai />
                 )}
