@@ -64,14 +64,6 @@ function Skill() {
 
     return (
         <div>
-            <div>
-                {brim.abilities.map((item, index) => (
-                    <div key={index} className="img-container">
-                        <img src={item.displayIcon} alt={item.displayName} className="ability-icon" />
-                        <div className="img-name">{item.displayName}</div>
-                    </div>
-                ))}
-            </div>
             <svg width="1000" height="1000" onClick={handleSvgClick}>
                 <image
                     href={maps.find((item) => item.displayName === itemName)?.displayIcon}
@@ -81,7 +73,7 @@ function Skill() {
                     height="100%"
                     preserveAspectRatio="none"
                     className="mapdata"
-                    transform={itemName !== "Lotus" && itemName !== "Bind" && itemName !== "Sunset" ? "rotate(90, 500, 500)" : "rotate(0,500,500)"}
+                    transform={itemName !== "Lotus" && itemName !== "Bind" && itemName !== "Sunset" ? itemName!=="Icebox"?"rotate(90, 500, 500)":"rotate(-90,500,500)" : "rotate(0,500,500)"}
                 />
                 {selectedMapData.map((item, index) => (
                     <g key={index}>
@@ -122,13 +114,10 @@ function Skill() {
                     <img key={index} src={`/${item}`} alt="Selected" />
                 )})}
             </div>
-            <div>
+            {/* <div>
                 <h3>Clicked Coordinates:</h3>
-                <p>X: {clickCoordinates.x}, Y: {clickCoordinates.y}</p>
-            </div>
-            <div>
-                <h3>Brimstone:</h3>
-            </div>
+                <p>"x": {clickCoordinates.x}, "y": {clickCoordinates.y}</p>
+            </div> */}
         </div>
     );
 }

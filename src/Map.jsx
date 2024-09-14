@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
+import skilldata from '/public/data/data.json';
 import './map.css';
 
 function Map() {
@@ -56,9 +57,10 @@ function Map() {
                 {a ? (
                     maps.map((item, index) => {
                         if (item.displayName !== "The Range" && item.displayName !== "Basic Training") {
+                            console.log(skilldata)
                             return (
                                 <div className="img-container" key={index} onClick={() => handleMapClick(item.displayName, itemName)}>
-                                    <img src={item.splash} className="maps" alt={`Map ${index}`} />
+                                    <img src={item.splash} className="maps" alt={`Map ${index}`} style={skilldata["map"]!=undefined?{"opacity":"0"}:{"opacity": "1"}}/>
                                     <div className="img-name">{item.displayName}</div>
                                 </div>
                             );

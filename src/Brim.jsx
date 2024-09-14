@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './brim.css';
 
+
 function Brim() {
     const [brim, setBrim] = useState(null);
     const [a, setA] = useState(false);
